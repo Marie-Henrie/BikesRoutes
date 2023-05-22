@@ -1,0 +1,20 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Liikunta.Models;
+
+public class Route
+{
+    public int Id { get; set; }
+    public DateTime Departure { get; set; }
+
+    public DateTime Return { get; set; }
+    public int? DepartureStationId { get; set; }
+    public string? DepartureStationName { get; set; }
+
+    public int? ReturnStationId { get; set; }
+
+    public string? ReturnStationName { get; set; }
+
+    public int? CoveredDistanceM { get; set; }
+    public int? DurationSec { get; set; }
+}
