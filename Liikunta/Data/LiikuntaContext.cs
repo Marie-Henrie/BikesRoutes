@@ -15,5 +15,7 @@ namespace Liikunta.Data
         }
 
         public DbSet<Liikunta.Models.Route> Route { get; set; } = default!;
+
+        public DbSet<Liikunta.Models.City> City { get; set; } = default!;
     }
 }

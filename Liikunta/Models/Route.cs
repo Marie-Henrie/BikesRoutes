@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Liikunta.Models;
 
@@ -17,4 +18,7 @@ public class Route
 
     public int? CoveredDistanceM { get; set; }
     public int? DurationSec { get; set; }
+
+    [ForeignKey("FID")]
+    public ICollection<City> Cities { get; set; }
 }
