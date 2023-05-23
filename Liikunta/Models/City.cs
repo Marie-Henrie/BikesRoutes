@@ -25,9 +25,11 @@ public class City
     public int? Kapasiteet { get; set; }
    
 
+    public double? xAkseli { get; set; }
+    public double? yAkseli { get; set; }
+
     public float? x { get; set; }
     public float? y { get; set; }
-
 
 }
 

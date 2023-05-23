@@ -4,6 +4,7 @@ using Liikunta.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Liikunta.Migrations
 {
     [DbContext(typeof(LiikuntaContext))]
-    partial class LiikuntaContextModelSnapshot : ModelSnapshot
+    [Migration("20230523222617_Jiji")]
+    partial class Jiji
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,16 +63,10 @@ namespace Liikunta.Migrations
                     b.Property<string>("Stad")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float?>("x")
-                        .HasColumnType("real");
-
-                    b.Property<double?>("xAkseli")
+                    b.Property<double?>("x")
                         .HasColumnType("float");
 
-                    b.Property<float?>("y")
-                        .HasColumnType("real");
-
-                    b.Property<double?>("yAkseli")
+                    b.Property<double?>("y")
                         .HasColumnType("float");
 
                     b.HasKey("Id");
